@@ -1,0 +1,77 @@
+
+<p> MADE BY ÁLVARO GARCÍA SIERRA - International Student</p>
+<br>
+<br>
+<br>
+<p> WELCOME , THIS ARE THE INSTRUCTIONS FOR THE API</p>
+FOR TESTING PURPOSSES I RECOMMEND USING AN APPLICATION LIKE POSTMAN, INSOMNIA, HOPPSCHOTCH OR HTTPIE
+
+<br>
+THE FOLLOWING COMMANDS (followed by "http://localhost:3001/api") ARE ALLOWED :
+<br>
+<br>
+<br>
+-GET &nbsp;&nbsp;&nbsp;   /products     &nbsp;&nbsp; (gets all products)
+<br>
+<br>
+-GET  &nbsp;&nbsp;&nbsp;  /product/:productId &nbsp;&nbsp; (gets one product by Id)
+ <br>   
+<br>
+-POST  &nbsp;&nbsp;&nbsp;  /product  &nbsp;&nbsp; (pots one product)
+<br>  
+Requires name(string), price(number,min 0), category('cars', 'shisha', or 'others'), description(string)
+ <br>   
+<br>
+-DELETE  &nbsp;&nbsp;&nbsp;  /product/:productId &nbsp;&nbsp; (deletes one product)
+<br>    
+(REQUIRES TOKEN AUTHORIZATION*)
+<br>
+<br>
+-UPDATE  &nbsp;&nbsp;&nbsp;  /product/:productId &nbsp;&nbsp; (updates one product)
+<br>  
+<br>
+-GET  &nbsp;&nbsp;&nbsp;  /users   &nbsp;&nbsp; (gets all users)
+<br>    
+(REQUIRES TOKEN AUTHORIZATION*)
+<br>
+<br>    
+-POST  &nbsp;&nbsp;&nbsp;   /signup  (creates a user and gives token)
+<br>    
+Requires  name(string, lowercase, unique), email(string, unique, minL:4), password(string), phone(of type:"+32-XXX-XXX-XXX")
+<br>
+<br>
+ -POST  &nbsp;&nbsp;&nbsp;  /signin
+ <br>   
+ Requires email, password
+<br>
+<br>
+-GET  &nbsp;&nbsp;&nbsp; /products/car   (gets all products with category of "car")
+<br>
+<br>
+-POST   &nbsp;&nbsp;&nbsp;  /private   (checks you have Token Authorization)
+<br>   
+<br><br> 
+*For access to private methods like "get /users || delete /product/:productId" first Sign In or Sign Up (which will give back a token) and add an "Authorization" key at the header 
+with vale: "Bearer" + that token if you still are not able to use them*
+<br><br> 
+
+LIST OF SOURCES:
+<br>   
+<a href = "https://www.youtube.com/watch?v=JwZKcm3zWcA&list=PLUdlARNXMVkk7E88zOrphPyGdS50Tadlr"> SPANISH EXPLANATION OF MONGODB AND NODEJS</a>
+<br>  
+<a href="https://docs.atlas.mongodb.com/getting-started/">ATLAS DOCUMENTATION</a>
+<br>
+<a href="https://mongoosejs.com/docs/validation.html">MONGOOSE VALIDATION</a>
+<br>
+<a href="https://mongoosejs.com/docs/api.html">MONGOOSE DOCUMENTATION</a>
+<br>   
+<a href="https://www.npmjs.com/package/jwt-simple">JWT DOCUMENTATION (encode-decode)</a>
+
+
+<br>   
+<br><br>   
+Default user:  admin@ehb.be  &nbsp;&nbsp;  password:  Password!321
+<br><br>   
+<br><br>   
+This API uses: express, mongoose, bcryptjs, handlebars, jwt, and nodemon
+<br>
