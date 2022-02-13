@@ -22,7 +22,7 @@ const mongoose = require('mongoose')
 const { MongoClient } = require('mongodb');
 
 
-const uri = "mongodb+srv://sct:JDB4wilF1GjBFVTS@webintegrationcluster.idown.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function run() {
